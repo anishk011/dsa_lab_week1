@@ -1,0 +1,38 @@
+// c program for implementation of stack  : 
+
+
+#include <stdio.h>
+#include<stdlib.h>
+
+
+int main() {
+    struct STACK{
+        int top ; 
+        int size ;
+        int*A;
+        
+        
+    };
+    
+    // function to create a stack to given  size ; 
+    
+    struct STACK* create(int n )
+    {
+        struct STACK* s = (struct STACK*)malloc(sizeof(struct STACK));
+        if(s==NULL)
+        {
+            printf("fatal error");
+            exit(1);
+        }
+        s->A = (int*)malloc(n* sizeof(int));
+        if(s->A==NULL)
+        {
+            printf("fatal error");
+            exit(1);
+            
+        }
+    }
+    
+    
+    return 0;
+}
